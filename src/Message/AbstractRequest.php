@@ -44,10 +44,14 @@ abstract class AbstractRequest extends BaseAbstractRequest
         return $this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint;
     }
 
-    protected function createResponse($data)
+    protected function createResponse($response)
     {
-        return $this->response = new Response($this, $data);
+        $factory = $this->getResponseFactory();
+
+        return $this->response = (new $factory)->handle($this, $response);
     }
+
+    abstract protected function getResponseFactory();
 
     protected function getBaseData()
     {

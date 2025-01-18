@@ -20,7 +20,16 @@ class Gateway extends AbstractGateway
         ];
     }
 
-    // Getter and setter methods for the default parameters
+    public function createCard(array $options = [])
+    {
+        return $this->createRequest('\Omnipay\Merchantware\Message\CreateCardRequest', $options);
+    }
+
+    public function purchase(array $options = [])
+    {
+        return $this->createRequest('\Omnipay\Merchantware\Message\PurchaseRequest', $options);
+    }
+
     public function getMerchantName()
     {
         return $this->getParameter('merchantName');
