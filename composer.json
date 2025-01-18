@@ -1,0 +1,27 @@
+{
+    "name": "olps/omnipay-merchantware",
+    "type": "library",
+    "description": "Merchantware gateway for Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchantware",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "homepage": "https://github.com/online-postal-scanning/omnipay-merchantware",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Merchantware\\": "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3.0",
+        "phpunit/phpunit": "^9.0"
+    }
+}
