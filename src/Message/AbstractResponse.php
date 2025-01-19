@@ -2,9 +2,9 @@
 
 namespace Omnipay\Merchantware\Message;
 
-use Omnipay\Common\Message\AbstractResponse;
+use Omnipay\Common\Message\AbstractResponse as OmnipayAbstractResponse;
 
-class Response extends AbstractResponse
+abstract class AbstractResponse extends OmnipayAbstractResponse
 {
     public function isSuccessful()
     {
