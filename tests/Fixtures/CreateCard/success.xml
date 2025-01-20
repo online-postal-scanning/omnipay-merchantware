@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <AuthorizeResponse xmlns="http://schemas.merchantwarehouse.com/merchantware/v46/">
+            <AuthorizeResult>
+                <ExtensionPoint>
+                    <_3a736c57-858a-4689-b1fd-9ce89bb9ab98>3a736c57-858a-4689-b1fd-9ce89bb9ab98</_3a736c57-858a-4689-b1fd-9ce89bb9ab98>
+                </ExtensionPoint>
+                <ApprovalStatus>APPROVED</ApprovalStatus>
+                <Token>6042661980</Token>
+                <AuthorizationCode>072037</AuthorizationCode>
+                <TransactionDate>1/20/2025 12:20:38 AM</TransactionDate>
+                <Amount>0.00</Amount>
+                <RemainingCardBalance />
+                <CardNumber>************7921</CardNumber>
+                <Cardholder>Corvus Meliora</Cardholder>
+                <CardType>4</CardType>
+                <FsaCard />
+                <ReaderEntryMode>1</ReaderEntryMode>
+                <AvsResponse>Z</AvsResponse>
+                <CvResponse>M</CvResponse>
+                <ErrorMessage />
+                <ExtraData />
+                <DebitTraceNumber />
+                <VaultBoardingResponse>
+                    <ExtensionPoint>
+                        <_6ad8b719-b35e-475d-ad90-729721c33109>6ad8b719-b35e-475d-ad90-729721c33109</_6ad8b719-b35e-475d-ad90-729721c33109>
+                    </ExtensionPoint>
+                    <VaultToken>10000010CWOJZ2IQGCOA</VaultToken>
+                    <ErrorCode />
+                    <ErrorMessage />
+                </VaultBoardingResponse>
+            </AuthorizeResult>
+        </AuthorizeResponse>
+    </soap:Body>
+</soap:Envelope>

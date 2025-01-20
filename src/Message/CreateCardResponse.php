@@ -4,8 +4,23 @@ namespace Omnipay\Merchantware\Message;
 
 class CreateCardResponse extends AbstractResponse
 {
-    public function getCardReference(): string
+    public function isSuccessful(): bool
     {
-        return $this->data['VaultBoardingResponse']['VaultToken'];
+        return !empty($this->data['VaultToken']);
+    }
+
+    public function getCardReference(): ?string
+    {
+        return $this->data['VaultToken'] ?? null;
+    }
+
+    public function getMessage(): ?string
+    {
+        return $this->data['ErrorMessage'] ?? null;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->data['ErrorCode'] ?? null;
     }
 }

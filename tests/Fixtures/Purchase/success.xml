@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <SaleResponse xmlns="http://schemas.merchantwarehouse.com/merchantware/v46/">
+            <SaleResult>
+                <ExtensionPoint>
+                    <_b6025fe8-7ef3-4d4b-8b92-6ae3a8582a2c>b6025fe8-7ef3-4d4b-8b92-6ae3a8582a2c</_b6025fe8-7ef3-4d4b-8b92-6ae3a8582a2c>
+                </ExtensionPoint>
+                <ApprovalStatus>APPROVED</ApprovalStatus>
+                <Token>123546046446</Token>
+                <AuthorizationCode>123311</AuthorizationCode>
+                <TransactionDate>1/20/2025 9:13:11 PM</TransactionDate>
+                <Amount>1.37</Amount>
+                <RemainingCardBalance />
+                <CardNumber>************7921</CardNumber>
+                <Cardholder>Corvus Meliora</Cardholder>
+                <CardType>4</CardType>
+                <FsaCard />
+                <ReaderEntryMode>8</ReaderEntryMode>
+                <AvsResponse>Z</AvsResponse>
+                <CvResponse />
+                <ErrorMessage />
+                <ExtraData />
+                <DebitTraceNumber />
+            </SaleResult>
+        </SaleResponse>
+    </soap:Body>
+</soap:Envelope>

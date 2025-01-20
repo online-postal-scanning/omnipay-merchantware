@@ -31,9 +31,6 @@ class PurchaseRequest extends AbstractRequest
                 <SurchargeAmount>0.00</SurchargeAmount>
                 <TaxAmount>0.00</TaxAmount>
                 <InvoiceNumber>%s</InvoiceNumber>
-                <RegisterNumber>%s</RegisterNumber>
-                <MerchantTransactionId>%s</MerchantTransactionId>
-                <CardAcceptorTerminalId>%s</CardAcceptorTerminalId>
                 <StoredCardReason>UNSCHEDULEDCIT</StoredCardReason>
             </Request>
         </Sale>
@@ -45,9 +42,6 @@ class PurchaseRequest extends AbstractRequest
             $this->getCardReference(),
             $this->getAmount(),
             $this->getInvoiceNumber() ?? '',
-            $this->getRegisterNumber() ?? '',
-            $this->getTransactionId() ?? '',
-            $this->getTerminalId() ?? ''
         );
     }
 
@@ -84,5 +78,15 @@ class PurchaseRequest extends AbstractRequest
     public function setTerminalId($value)
     {
         return $this->setParameter('terminalId', $value);
+    }
+
+    public function getTransactionId()
+    {
+        return $this->getParameter('merchantTransactionId');
+    }
+
+    public function setTransactionId($value)
+    {
+        return $this->setParameter('merchantTransactionId', $value);
     }
 }

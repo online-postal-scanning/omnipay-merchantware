@@ -17,11 +17,22 @@
             "Omnipay\\Merchantware\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "require": {
+        "php": "^8.3",
         "omnipay/common": "^3.0"
     },
     "require-dev": {
-        "omnipay/tests": "^3.0",
-        "phpunit/phpunit": "^9.0"
+        "omnipay/tests": "dev-master",
+        "phpunit/phpunit": "^11.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     }
 }

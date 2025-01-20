@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <AuthorizeResponse xmlns="http://schemas.merchantwarehouse.com/merchantware/v46/">
+            <AuthorizeResult>
+                <ExtensionPoint>
+                    <_c2bf0007-cf75-4c69-b2f8-a82c2ef4604c>c2bf0007-cf75-4c69-b2f8-a82c2ef4604c</_c2bf0007-cf75-4c69-b2f8-a82c2ef4604c>
+                    <_4c5f3a00-4562-4d1d-9f2d-0fd408e9101f>4c5f3a00-4562-4d1d-9f2d-0fd408e9101f</_4c5f3a00-4562-4d1d-9f2d-0fd408e9101f>
+                </ExtensionPoint>
+                <ApprovalStatus>DECLINED;1012;decline</ApprovalStatus>
+                <Token>6043665729</Token>
+                <AuthorizationCode />
+                <TransactionDate>1/20/2025 10:08:53 PM</TransactionDate>
+                <Amount>0.00</Amount>
+                <RemainingCardBalance />
+                <CardNumber>************7921</CardNumber>
+                <Cardholder>Corvus Meliora</Cardholder>
+                <CardType>4</CardType>
+                <FsaCard />
+                <ReaderEntryMode>1</ReaderEntryMode>
+                <AvsResponse>U</AvsResponse>
+                <CvResponse>N</CvResponse>
+                <ErrorMessage>N7: CVV2 Value supplied is invalid</ErrorMessage>
+                <ExtraData />
+                <DebitTraceNumber />
+            </AuthorizeResult>
+        </AuthorizeResponse>
+    </soap:Body>
+</soap:Envelope>

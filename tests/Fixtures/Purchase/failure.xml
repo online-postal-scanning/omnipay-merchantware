@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <SaleResponse xmlns="http://schemas.merchantwarehouse.com/merchantware/v46/">
+            <SaleResult>
+                <ExtensionPoint>
+                    <_dbae5bc7-5a7e-4c77-a4fd-edd8658df444>dbae5bc7-5a7e-4c77-a4fd-edd8658df444</_dbae5bc7-5a7e-4c77-a4fd-edd8658df444>
+                    <_749ea8ec-a0dc-49d2-aa65-7fb0b435b214>749ea8ec-a0dc-49d2-aa65-7fb0b435b214</_749ea8ec-a0dc-49d2-aa65-7fb0b435b214>
+                </ExtensionPoint>
+                <ApprovalStatus>DECLINED,DUPLICATE;1110;duplicate transaction</ApprovalStatus>
+                <Token>6043536930</Token>
+                <AuthorizationCode />
+                <TransactionDate>1/20/2025 9:08:41 PM</TransactionDate>
+                <Amount>1.36</Amount>
+                <RemainingCardBalance />
+                <CardNumber>************7921</CardNumber>
+                <Cardholder>Corvus Meliora</Cardholder>
+                <CardType>4</CardType>
+                <FsaCard />
+                <ReaderEntryMode>8</ReaderEntryMode>
+                <AvsResponse />
+                <CvResponse />
+                <ErrorMessage />
+                <ExtraData>Original ReferenceID=6043511929;Original AuthCode=035644</ExtraData>
+                <DebitTraceNumber />
+            </SaleResult>
+        </SaleResponse>
+    </soap:Body>
+</soap:Envelope>
