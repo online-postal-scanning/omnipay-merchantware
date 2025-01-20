@@ -31,9 +31,11 @@ class CreateCardRequest extends AbstractRequest
                 <CardPresence>NOTPRESENT</CardPresence>
             </PaymentData>
             <Request>
-                <Amount>%s</Amount>
+                <Amount>0.00</Amount>
+                <StoreCardInVault>True</StoreCardInVault>
+                <StoredCardReason>UNSCHEDULEDCIT</StoredCardReason>
                 <TaxAmount>0</TaxAmount>
-                <ForceDuplicate>False</ForceDuplicate>
+                <ForceDuplicate>True</ForceDuplicate>
             </Request>
         </Authorize>
     </soap12:Body>
@@ -46,7 +48,6 @@ $card->getExpiryDate('my'),  // Format: MMYY
 $card->getName(),
 $card->getPostcode(),
 $card->getCvv(),
-$this->getAmount() ?? '0.00'
         );
     }
 
