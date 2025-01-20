@@ -34,6 +34,7 @@ class PurchaseRequest extends AbstractRequest
                 <RegisterNumber>%s</RegisterNumber>
                 <MerchantTransactionId>%s</MerchantTransactionId>
                 <CardAcceptorTerminalId>%s</CardAcceptorTerminalId>
+                <StoredCardReason>UNSCHEDULEDCIT</StoredCardReason>
             </Request>
         </Sale>
     </soap12:Body>

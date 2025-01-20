@@ -6,41 +6,41 @@ class PurchaseResponse extends AbstractResponse
 {
     public function isSuccessful(): bool
     {
-        return isset($this->data['SaleResponse']['ApprovalStatus']) 
-            && $this->data['SaleResponse']['ApprovalStatus'] === 'APPROVED';
+        return isset($this->data['SaleResponse']['SaleResult']['ApprovalStatus']) 
+            && $this->data['SaleResponse']['SaleResult']['ApprovalStatus'] === 'APPROVED';
     }
 
     public function getTransactionReference(): ?string
     {
-        return $this->data['SaleResponse']['Token'] ?? null;
+        return $this->data['SaleResponse']['SaleResult']['Token'] ?? null;
     }
 
     public function getAuthorizationCode(): ?string
     {
-        return $this->data['SaleResponse']['AuthorizationCode'] ?? null;
+        return $this->data['SaleResponse']['SaleResult']['AuthorizationCode'] ?? null;
     }
 
     public function getAvsResponse(): ?string
     {
-        return $this->data['SaleResponse']['AvsResponse'] ?? null;
+        return $this->data['SaleResponse']['SaleResult']['AvsResponse'] ?? null;
     }
 
     public function getCvvResponse(): ?string
     {
-        return $this->data['SaleResponse']['CvvResponse'] ?? null;
+        return $this->data['SaleResponse']['SaleResult']['CvvResponse'] ?? null;
     }
 
     public function getMessage(): ?string
     {
         if (!$this->isSuccessful()) {
-            return $this->data['SaleResponse']['ErrorMessage'] ?? 'Unknown error';
+            return $this->data['SaleResponse']['SaleResult']['ErrorMessage'] ?? 'Unknown error';
         }
 
-        return $this->data['SaleResponse']['ApprovalStatus'] ?? null;
+        return $this->data['SaleResponse']['SaleResult']['ApprovalStatus'] ?? null;
     }
 
     public function getCode(): ?string
     {
-        return $this->data['SaleResponse']['ErrorCode'] ?? null;
+        return $this->data['SaleResponse']['SaleResult']['ErrorCode'] ?? null;
     }
 }
