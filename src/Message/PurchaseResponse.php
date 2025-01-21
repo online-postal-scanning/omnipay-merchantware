@@ -29,27 +29,4 @@ class PurchaseResponse extends AbstractResponse
     {
         return $this->data['CvResponse'] ?? null;
     }
-
-    public function getMessage(): ?string
-    {
-        if (!$this->isSuccessful()) {
-            if (!empty($this->data['ErrorMessage'])) {
-                return $this->data['ErrorMessage'];
-            }
-            return $this->data['ApprovalStatus'] ?? 'Unknown error';
-        }
-
-        return $this->data['ApprovalStatus'] ?? null;
-    }
-
-    public function getCode(): ?string
-    {
-        if (!$this->isSuccessful() && !empty($this->data['ApprovalStatus'])) {
-            $parts = explode(';', $this->data['ApprovalStatus']);
-            if (count($parts) >= 2) {
-                return $parts[1];
-            }
-        }
-        return $this->data['ErrorCode'] ?? null;
-    }
 }

@@ -6,21 +6,11 @@ class CreateCardResponse extends AbstractResponse
 {
     public function isSuccessful(): bool
     {
-        return !empty($this->data['VaultToken']);
+        return !empty($this->data['VaultBoardingResponse']['VaultToken']);
     }
 
     public function getCardReference(): ?string
     {
-        return $this->data['VaultToken'] ?? null;
-    }
-
-    public function getMessage(): ?string
-    {
-        return $this->data['ErrorMessage'] ?? null;
-    }
-
-    public function getCode(): ?string
-    {
-        return $this->data['ErrorCode'] ?? null;
+        return $this->data['VaultBoardingResponse']['VaultToken'] ?? null;
     }
 }

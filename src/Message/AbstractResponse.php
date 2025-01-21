@@ -18,11 +18,35 @@ abstract class AbstractResponse extends OmnipayAbstractResponse
 
     public function getMessage()
     {
-        return isset($this->data['ErrorMessage']) ? $this->data['ErrorMessage'] : null;
+        if (!$this->isSuccessful()) {
+            $message = $this->extractErrorMessage();
+
+            if ($message) {
+                if (str_contains($message, ':')) {
+                    return trim(substr(strstr($message, ':'), 1));
+                }
+                return $message;
+            }
+        }
+        
+        return $this->data['ApprovalStatus'] ?? null;
     }
 
     public function getCode()
     {
-        return isset($this->data['ErrorCode']) ? $this->data['ErrorCode'] : null;
+        $message = $this->extractErrorMessage();
+        
+        if ($message && str_contains($message, ':')) {
+            return trim(strstr($message, ':', true));
+        }
+        
+        return $this->data['VaultBoardingResponse']['ErrorCode'] ?? null;
+    }
+
+    protected function extractErrorMessage()
+    {
+        return $this->data['ErrorMessage'] 
+            ?? $this->data['VaultBoardingResponse']['ErrorMessage'] 
+            ?? null;    
     }
 }

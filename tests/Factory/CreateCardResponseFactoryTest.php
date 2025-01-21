@@ -24,6 +24,7 @@ class CreateCardResponseFactoryTest extends TestCase
 
     public function testHandleSuccessfulResponse(): void
     {
+        xdebug_break();
         $xmlContent = file_get_contents(__DIR__ . '/../Fixtures/CreateCard/success.xml');
         $response = $this->createMockResponse($xmlContent);
 
@@ -31,7 +32,7 @@ class CreateCardResponseFactoryTest extends TestCase
 
         self::assertInstanceOf(CreateCardResponse::class, $result);
         self::assertTrue($result->isSuccessful());
-        self::assertNotNull($result->getCardReference());
+        self::assertSame('10000010CWOJZ2IQGCOA', $result->getCardReference());
         // Add more assertions based on your XML content
     }
 
@@ -44,8 +45,8 @@ class CreateCardResponseFactoryTest extends TestCase
 
         self::assertInstanceOf(CreateCardResponse::class, $result);
         self::assertFalse($result->isSuccessful());
-        self::assertNotNull($result->getMessage());
-        self::assertNotNull($result->getCode());
+        self::assertSame('CVV2 Value supplied is invalid', $result->getMessage());
+        self::assertSame('N7', $result->getCode());
         // Add more assertions based on your XML content
     }
 
