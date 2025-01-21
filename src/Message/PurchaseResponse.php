@@ -12,21 +12,21 @@ class PurchaseResponse extends AbstractResponse
 
     public function getTransactionReference(): ?string
     {
-        return $this->data['Token'] ?? null;
+        return empty($this->data['Token']) ? null : $this->data['Token'];
     }
 
     public function getAuthorizationCode(): ?string
     {
-        return $this->data['AuthorizationCode'] ?? null;
+        return empty($this->data['AuthorizationCode']) ? null : $this->data['AuthorizationCode'];
     }
 
     public function getAvsResponse(): ?string
     {
-        return $this->data['AvsResponse'] ?? null;
+        return empty($this->data['AvsResponse']) ? null : $this->data['AvsResponse'];
     }
 
     public function getCvvResponse(): ?string
     {
-        return $this->data['CvResponse'] ?? null;
+        return empty($this->data['CvResponse']) ? null : $this->data['CvResponse'];
     }
 }

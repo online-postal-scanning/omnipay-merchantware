@@ -24,7 +24,6 @@ class CreateCardResponseFactoryTest extends TestCase
 
     public function testHandleSuccessfulResponse(): void
     {
-        xdebug_break();
         $xmlContent = file_get_contents(__DIR__ . '/../Fixtures/CreateCard/success.xml');
         $response = $this->createMockResponse($xmlContent);
 

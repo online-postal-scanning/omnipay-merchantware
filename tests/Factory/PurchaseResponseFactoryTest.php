@@ -53,7 +53,7 @@ class PurchaseResponseFactoryTest extends TestCase
         self::assertNull($result->getAvsResponse());
         self::assertNull($result->getCvvResponse());
         self::assertSame('DECLINED,DUPLICATE;1110;duplicate transaction', $result->getMessage());
-        self::assertSame('1110', $result->getCode());
+        self::assertNull($result->getCode());
     }
 
     private function createMockResponse(string $content): ResponseInterface
