@@ -41,5 +41,5 @@ jobs:
 
     - name: Run test suite
       env:
-        SYMFONY_DEPRECATIONS_HELPER: disabled=1
+        SYMFONY_DEPRECATIONS_HELPER: weak
       run: vendor/bin/phpunit
